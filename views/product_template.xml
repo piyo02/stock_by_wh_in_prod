@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="stock_product_tree_view" model="ir.ui.view">
+        <field name="name">product.template.product.tree</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='uom_id']" position="before">
+                <field name="stock_in_store"/>
+                <field name="stock_in_warehouse"/>
+                <field name="stock_in_canvas_car"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
