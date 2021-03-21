@@ -7,9 +7,9 @@
         <field name="inherit_id" ref="stock.view_move_picking_tree"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='product_uom_qty']" position="before">
-                <field name="stock_in_store"/>
-                <field name="stock_in_warehouse"/>
-                <field name="stock_in_canvas_car"/>
+                <field name="stock_in_store" readonly="1"/>
+                <field name="stock_in_warehouse" readonly="1"/>
+                <field name="stock_in_canvas_car" readonly="1"/>
             </xpath>
         </field>
     </record>
